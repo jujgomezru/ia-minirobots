@@ -27,46 +27,46 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Notebook data structure
+// Notebook data structure (CORREGIDO)
 const notebooks = [
     {
-        title: "Introducción a la IA",
-        description: "Conceptos básicos de inteligencia artificial y sus aplicaciones en robótica.",
+        title: "Panorama de la Inteligencia Artificial",
+        description: "Definiciones y reflexiones sobre Inteligencia Artificial. Perspectivas éticas del uso de IA. Planes de gobierno sobre uso de la IA.",
         icon: "fas fa-brain",
-        file: "notebooks/introduccion-ia.ipynb",
-        category: "fundamentos"
+        file: "notebooks/01-panorama-ia.ipynb",
+        category: "introduccion"
     },
     {
-        title: "Control de Motores",
-        description: "Programación y control de motores para mini-robots usando Python.",
+        title: "Autómatas Celulares",
+        description: "Aplicación de reglas básicas para autómatas celulares. Simulación de robot con tres sensores que evitan obstáculos. Diagrama de Voronoi de un pequeño municipio.",
         icon: "fas fa-cog",
-        file: "notebooks/control-motores.ipynb",
-        category: "hardware"
+        file: "notebooks/02-automatas-celulares.ipynb", // Añadida extensión .ipynb
+        category: "automatas"
     },
     {
-        title: "Visión por Computadora",
-        description: "Procesamiento de imágenes y reconocimiento de objetos para robots.",
+        title: "Algoritmos genéticos",
+        description: "Hallazgo de puntos máximos con cromosomas y selección genética. Uso de algoritmos para resolver asignación de curules y costos de plantas eléctricas.",
         icon: "fas fa-eye",
-        file: "notebooks/vision-computadora.ipynb",
+        file: "notebooks/03-algoritmos-geneticos.ipynb",
         category: "vision"
     },
     {
-        title: "Navegación Autónoma",
-        description: "Algoritmos de navegación y planificación de rutas para robots móviles.",
+        title: "Programación genética",
+        description: "Uso de programación genética para diseño de circuitos. Programación de robot simulado para resolver tareas sencillas.",
         icon: "fas fa-route",
-        file: "notebooks/navegacion-autonoma.ipynb",
+        file: "notebooks/04-programacion-genetica.ipynb",
         category: "navegacion"
     },
     {
-        title: "Aprendizaje por Refuerzo",
-        description: "Implementación de algoritmos de RL para el control inteligente de robots.",
+        title: "Introducción a las Redes Neuronales Artificiales",
+        description: "Construcción de redes neuronales para compuertas lógicas. Uso de redes neuronales para clasificación de librerías masivas",
         icon: "fas fa-graduation-cap",
-        file: "notebooks/aprendizaje-refuerzo.ipynb",
+        file: "notebooks/05-redes-neuronales.ipynb", // Corregido: comillas y ruta completa
         category: "ml"
     },
     {
-        title: "Sensores y Actuadores",
-        description: "Interfaz con sensores y actuadores comunes en mini-robots.",
+        title: "Machine Learning",
+        description: "En desarrollo",
         icon: "fas fa-microchip",
         file: "notebooks/sensores-actuadores.ipynb",
         category: "hardware"
