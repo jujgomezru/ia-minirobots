@@ -40,7 +40,7 @@ const notebooks = [
         title: "Autómatas Celulares",
         description: "Aplicación de reglas básicas para autómatas celulares. Simulación de robot con tres sensores que evitan obstáculos. Diagrama de Voronoi de un pequeño municipio.",
         icon: "fas fa-cog",
-        file: "notebooks/02-automatas-celulares.ipynb", // Añadida extensión .ipynb
+        file: "notebooks/02-automatas-celulares.ipynb",
         category: "automatas"
     },
     {
@@ -61,7 +61,7 @@ const notebooks = [
         title: "Introducción a las Redes Neuronales Artificiales",
         description: "Construcción de redes neuronales para compuertas lógicas. Uso de redes neuronales para clasificación de librerías masivas",
         icon: "fas fa-graduation-cap",
-        file: "notebooks/05-redes-neuronales.ipynb", // Corregido: comillas y ruta completa
+        file: "notebooks/05-redes-neuronales.ipynb",
         category: "ml"
     },
     {
