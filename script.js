@@ -61,7 +61,7 @@ const notebooks = [
         title: "Introducción a las Redes Neuronales Artificiales",
         description: "Construcción de redes neuronales para compuertas lógicas. Uso de redes neuronales para clasificación de librerías masivas",
         icon: "fas fa-graduation-cap",
-        file: "notebooks/05-redes-neuronales.ipynb",
+        file: "notebooks/05-intro-redes-neuronales.ipynb",
         category: "ml"
     },
     {
