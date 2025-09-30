@@ -75,6 +75,13 @@ const notebooks = [
 
 // Function to create notebook cards
 function createNotebookCard(notebook) {
+    // URL base de Google Colab con tu repositorio
+    const colabBaseUrl = 'https://colab.research.google.com/github/';
+    const userRepo = 'jujgomezru/ia-minirobots'; // Esto lo puedes hacer dinámico si quieres
+    const branch = 'main'; // o 'master' según tu repositorio
+    
+    const colabUrl = `${colabBaseUrl}${userRepo}/blob/${branch}/${notebook.file}`;
+    
     return `
         <div class="notebook-card">
             <h3>
@@ -82,10 +89,16 @@ function createNotebookCard(notebook) {
                 ${notebook.title}
             </h3>
             <p>${notebook.description}</p>
-            <a href="${notebook.file}" class="notebook-link" target="_blank">
-                <i class="fas fa-external-link-alt"></i>
-                Abrir Notebook
-            </a>
+            <div class="notebook-actions">
+                <a href="${colabUrl}" class="notebook-link colab-link" target="_blank">
+                    <i class="fab fa-google"></i>
+                    Abrir en Colab
+                </a>
+                <a href="${notebook.file}" class="notebook-link download-link" download>
+                    <i class="fas fa-download"></i>
+                    Descargar .ipynb
+                </a>
+            </div>
         </div>
     `;
 }
@@ -115,26 +128,25 @@ function loadNotebooks() {
 // Function to handle notebook clicks and check if files exist
 function setupNotebookLinks() {
     document.addEventListener('click', function(e) {
-        if (e.target.classList.contains('notebook-link') || e.target.parentElement.classList.contains('notebook-link')) {
+        // Solo verificar enlaces de descarga, no los de Colab
+        if (e.target.classList.contains('download-link') || 
+            e.target.parentElement.classList.contains('download-link')) {
             e.preventDefault();
             
-            const link = e.target.classList.contains('notebook-link') ? e.target : e.target.parentElement;
+            const link = e.target.classList.contains('download-link') ? e.target : e.target.parentElement;
             const notebookPath = link.getAttribute('href');
             
-            // Check if the notebook file exists
             fetch(notebookPath)
                 .then(response => {
                     if (response.ok) {
-                        // If file exists, open it
-                        window.open(notebookPath, '_blank');
+                        // Forzar la descarga
+                        window.location.href = notebookPath;
                     } else {
-                        // If file doesn't exist, show a message
-                        showNotebookMessage(link, 'Este notebook estará disponible próximamente.');
+                        showNotebookMessage(link, 'Archivo no disponible temporalmente.');
                     }
                 })
                 .catch(() => {
-                    // If there's an error (file doesn't exist), show a message
-                    showNotebookMessage(link, 'Este notebook estará disponible próximamente.');
+                    showNotebookMessage(link, 'Error de conexión.');
                 });
         }
     });

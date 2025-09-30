@@ -260,6 +260,12 @@ body {
     margin-bottom: 20px;
 }
 
+.notebook-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
 .notebook-link {
     display: inline-flex;
     align-items: center;
@@ -272,6 +278,26 @@ body {
 
 .notebook-link:hover {
     color: #764ba2;
+}
+
+.colab-link {
+    background: linear-gradient(135deg, #4285f4, #34a853);
+    color: white;
+}
+
+.colab-link:hover {
+    background: linear-gradient(135deg, #3367d6, #2e8b57);
+    transform: translateY(-2px);
+}
+
+.download-link {
+    background: #6c757d;
+    color: white;
+}
+
+.download-link:hover {
+    background: #545b62;
+    transform: translateY(-2px);
 }
 
 /* About section */
