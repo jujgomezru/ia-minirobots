@@ -66,10 +66,17 @@ const notebooks = [
     },
     {
         title: "Machine Learning",
-        description: "En desarrollo",
+        description: "Uso de ML para simular multiplicación de matrices. Algoritmos SVM, Q-Learning y Naive Bayes",
         icon: "fas fa-microchip",
-        file: "notebooks/sensores-actuadores.ipynb",
-        category: "hardware"
+        file: "notebooks/06-machine-learning.ipynb",
+        category: "ml"
+    },
+    {
+        title: "Inteligencia Artificial Generativa",
+        description: "Creación de un agente de chatbot del contenido del curso. Aplicación de RAG para agente personalizado. Investigación sobre LLMs e IA en Colombia",
+        icon: "fas fa-robot",
+        file: "notebooks/07-ia-generativa.ipynb",
+        category: "llms"
     }
 ];
 
